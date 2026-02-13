@@ -1,0 +1,64 @@
+<section id="financiamiento" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">
+        Planes de Financiamiento
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Elige el plan que mejor se adapte a tu presupuesto. Todos incluyen respuesta inmediata.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div 
+        *ngFor="let plan of plans"
+        [class]="'relative bg-white border-2 rounded-xl p-8 transition-all hover:shadow-lg-custom ' + (plan.popular ? 'border-red-600 shadow-lg-custom' : 'border-gray-200')"
+      >
+        <div *ngIf="plan.popular" class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <div class="bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full">
+            Más Popular
+          </div>
+        </div>
+
+        <div class="text-center mb-6">
+          <div class="text-3xl font-bold text-gray-900 mb-2">Plazo {{ plan.plazo }}</div>
+          <div class="text-sm text-gray-600">Crédito personalizado</div>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+            <span class="text-sm text-gray-600">Enganche</span>
+            <span class="text-lg font-bold text-gray-900">{{ plan.enganche }}</span>
+          </div>
+          <div class="flex justify-between items-center pb-3 border-b border-gray-200">
+            <span class="text-sm text-gray-600">Pago semanal</span>
+            <span class="text-lg font-bold text-gray-900">{{ plan.pagoSemanal }}</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-600">Total</span>
+            <span class="text-lg font-bold text-gray-900">$86,999.99</span>
+          </div>
+        </div>
+
+        <a 
+          href="#solicitar"
+          [class]="'block w-full py-3 text-center font-semibold rounded-lg transition-colors ' + (plan.popular ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200')"
+        >
+          Solicitar este plan
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-blue-50 border border-blue-200 rounded-xl p-6">
+      <h3 class="font-semibold text-gray-900 mb-3">Requisitos:</h3>
+      <ul class="grid md:grid-cols-2 gap-3">
+        <li *ngFor="let req of requirements" class="flex items-start gap-2 text-sm text-gray-700">
+          <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          {{ req }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

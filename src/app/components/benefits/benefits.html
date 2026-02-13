@@ -1,0 +1,27 @@
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">
+        Beneficios Exclusivos
+      </h2>
+      <p class="text-lg text-gray-600">
+        Todo lo que necesitas para empezar a generar ingresos
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div 
+        *ngFor="let benefit of benefits"
+        class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg-custom transition-all"
+      >
+        <div class="w-14 h-14 bg-red-50 rounded-lg flex items-center justify-center text-red-600 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="benefit.icon" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900 mb-2">{{ benefit.title }}</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">{{ benefit.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

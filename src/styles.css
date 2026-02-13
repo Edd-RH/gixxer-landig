@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shadow-custom {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-lg-custom {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-gray-900;
+    margin: 0;
+    padding: 0;
+  }
+}

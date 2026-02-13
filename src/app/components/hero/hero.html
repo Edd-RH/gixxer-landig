@@ -1,0 +1,76 @@
+<section class="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-200">
+          <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-sm font-medium text-blue-900">Suzuki + DiDi | Modelo 2026</span>
+        </div>
+
+        <div>
+          <h1 class="font-heading text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+            Suzuki Gixxer 250
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            La moto perfecta para combinar tu trabajo con aventura. Potencia, economía y confiabilidad en un solo vehículo.
+          </p>
+        </div>
+
+        <div class="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-custom">
+          <div class="flex items-baseline gap-3 mb-2">
+            <span class="text-sm font-medium text-gray-600">Desde</span>
+            <span class="font-heading text-5xl font-bold text-gray-900">$4,350</span>
+            <span class="text-lg text-gray-500">MXN</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-4">Pago inicial | Precio total: $86,999.99</p>
+          <div class="flex items-center gap-2 text-sm text-green-700 bg-green-50 px-4 py-2 rounded-lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-medium">Respuesta inmediata a tu solicitud</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a 
+            href="#solicitar"
+            class="flex-1 px-8 py-4 bg-red-600 text-white text-center font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg-custom"
+          >
+            Solicitar Crédito Ahora
+          </a>
+          <a 
+            href="#financiamiento"
+            class="flex-1 px-8 py-4 bg-white border-2 border-gray-300 text-gray-900 text-center font-semibold rounded-lg hover:border-red-600 hover:text-red-600 transition-colors"
+          >
+            Ver Planes
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
+          <div *ngFor="let spec of specs" class="text-center">
+            <div class="text-2xl font-bold text-gray-900 mb-1">{{ spec.value }}</div>
+            <div class="text-xs text-gray-600">{{ spec.label }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content - Bike Image -->
+      <div class="relative">
+        <div class="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl overflow-hidden shadow-lg-custom">
+          <img 
+            src="images\moto.png"
+            alt="Suzuki Gixxer 250"
+            class="w-full h-full object-contain p-4"
+          />
+        </div>
+        <div class="absolute -bottom-6 -right-6 bg-white border-2 border-gray-200 rounded-xl p-4 shadow-lg-custom">
+          <div class="text-xs text-gray-600 mb-1">Modelo</div>
+          <div class="text-lg font-bold text-gray-900">2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
